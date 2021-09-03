@@ -27,6 +27,7 @@ exports.up = function(knex) {
         .unsigned()
         .onUpdate("CASCADE")
         .onDelete("CASCADE")
+      tbl.boolean("completed").defaultTo(false)
     })
 };
 
