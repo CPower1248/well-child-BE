@@ -18,18 +18,21 @@ exports.up = function(knex) {
         .inTable("age")
         .notNullable()
         .unsigned()
-        .onUpdate('CASCADE')
-        .onDelete('CASCADE')
+        .onUpdate("CASCADE")
+        .onDelete("CASCADE")
       tbl.integer("category_id")
         .references("id")
         .inTable("category")
         .notNullable()
         .unsigned()
-        .onUpdate('CASCADE')
-        .onDelete('CASCADE')
+        .onUpdate("CASCADE")
+        .onDelete("CASCADE")
     })
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTableIfExists("content")  
+  return knex.schema
+    .dropTableIfExists("content")
+    .dropTableIfExists("category")
+    .dropTableIfExists("age");
 };

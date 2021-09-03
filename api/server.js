@@ -17,7 +17,7 @@ const contentRouter = require("./content/router")
 server.use("/api/content", contentRouter)
 
 server.get("/", (req, res) => {
-  res.json({ api: "API is running" })
+  res.json("API is listening")
 })
 
 server.use((err, req, res, next) => {
