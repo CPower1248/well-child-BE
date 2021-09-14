@@ -8,13 +8,14 @@ server.use(helmet())
 server.use(cors())
 server.use(express.json())
 
+// - For login component
 // const authRouter = require("./auth/auth-router")
 const contentRouter = require("./content/router")
 
 // const restricted = require("./auth/auth-restricted")
 
 // server.use("/api/auth", authRouter)
-server.use("/api/content", contentRouter)
+server.use("/api/ageContent", contentRouter)
 
 server.get("/", (req, res) => {
   res.json("API is listening")
