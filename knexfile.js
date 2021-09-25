@@ -2,8 +2,8 @@ require("dotenv").config()
 
 const pg = require("pg")
 
-const localConnection = `postgresql://postgres:${process.env.PGPASSWORD}@localhost:5432/well-child-BE`
-const testingConnection = `postgresql://postgres:${process.env.PGPASSWORD}@localhost:5432/-testing-well-child-BE`
+const localConnection = `postgresql://postgres:${process.env.PGPASSWORD}@localhost/well-child-BE`
+const testingConnection = `postgresql://postgres:${process.env.PGPASSWORD}@localhost/-testing-well-child-BE`
 
 let connection
 

@@ -9,9 +9,9 @@
     "migrate": "knex migrate:latest",
     "rollback": "knex migrate:rollback",
     "seed": "knex seed:run",
-    "migrateh": "heroku run knex migrate:latest -a well-child-BE",
-    "rollbackh": "heroku run knex migrate:rollback -a well-child-BE",
-    "seedh": "heroku run knex seed:run -a well-child-BE",
+    "migrateh": "heroku run knex migrate:latest -a well-child-be",
+    "rollbackh": "heroku run knex migrate:rollback -a well-child-be",
+    "seedh": "heroku run knex seed:run -a well-child-be",
     "test": "cross-env NODE_ENV=testing jest --watchAll --verbose --runInBand"
   },
   "author": "Corey Power",
